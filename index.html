@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,intial-scale=1.0">
     <title>SVG Background</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/style.css" >
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
 </head>
 <body >
 
-    <section class="container" onclick="drop()">
-        <div id="drop" ></div>
+    <button type="button" id="start" onclick="start()">Start Animating</button>
+
+    <section id="container" onclick="drop()">
+        <div id="drop"></div>
     </section>
-    
+    <div id="fairy" onclick="fairy()"></div>
 
     <script src="/javaScript/script.js" ></script>
 </body>
