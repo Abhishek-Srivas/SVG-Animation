@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0; 
 }
-
+body{
+    background-image:linear-gradient(#83a4d4,#b6fbff);
+}
 #start{
     position: absolute;
     height:30px;
@@ -27,6 +29,7 @@
     height: 100vh;
     width: 100%;
     overflow: hidden;
+  
 }
 
 #drop{
@@ -45,8 +48,62 @@
     top: 20vh;
     left: 50%; 
     height: 200px;
-    color: whitesmoke;
     width: 200px;
     display: none;    
 }
 
+#isekai{
+    position: absolute;
+    height:150px;
+    width:150px;
+    top: 5vh;
+    left: 57%;
+    border: 1px solid aquamarine;
+    border-color:none;
+    background-color:rgba(0, 0, 0, 0.78);
+    outline-style: none;
+    font-size: 14px;
+    box-shadow: 2px 2px 40px rgba(23, 209, 172, 0.69);
+    border-radius: 50%;
+    display: none;
+    color: #ffffff;
+    
+}
+
+#isekai:active{
+    transform: scale(1.1);
+}
+
+#nemo{
+    position: absolute;
+    background-image: url(/Images/nemo.png);
+    background-size:cover ;
+    height: 20px;
+    width: 40px;
+    top:90vh;
+    left: 10vw;
+    display: none;
+
+}
+
+#g-fish{
+    position: absolute;
+    background-image: url(/Images/g-fish.png);
+    background-size:cover ;
+    height: 40px;
+    width: 46px;
+    top:93vh;
+    left: 80vw;
+    display: none;
+}
+
+#whale{
+    position: absolute;
+    background-image: url(/Images/whale.png);
+    background-size:cover ;
+    height: 70px;
+    width: 100px;
+    top:84vh;
+    left: 88vw;
+    display: none;
+}

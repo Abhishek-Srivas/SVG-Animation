@@ -47,7 +47,18 @@ function fairy(){
     else{
         fairy.style.top = 20 +"vh";
         alert("don,t disturb fairy, she can send you in other realm")
+        document.getElementById("isekai").style.display = "block";
     }
+
+}
+
+function realmChange(){
+    document.getElementById("container").style.backgroundImage = "url('/Images/Background2/Background2.jpg')";
+    document.getElementById("fairy").style.display = "none";
+    document.getElementById("isekai").style.display = "none";
+    document.getElementById("nemo").style.display = "block";
+    document.getElementById("g-fish").style.display = "block";
+    document.getElementById("whale").style.display = "block";
 
 }
 
@@ -66,7 +77,10 @@ Problem faced and learned:-
 5.getting the position of cursor                                ref:- ~
 6.calling a function again and again                            ref:- ~
 7.making drop appear at the place of mouse click                ref:- (own logic)putting every thing in section and adding onclick in section >
-8.avoiding drop overflow                                        setting position to rel
+8.avoiding drop overflow                                        setting position to relative
+9.adding new button to toggle the fairy world
+10.adding new world portal for making it fun
+11.Human World <3  
 
 Moving logic :-
 :-syntax from w3schools
