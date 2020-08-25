@@ -3,6 +3,119 @@
 
 document.getElementById("welcome").innerHTML = "Welcome, press the button to start your jorney";//starting banner text
 
+function bouyant(){
+    var pos=100;
+    var rot = 0;
+    var element1 = document.querySelector('#backgorund-Animation li:nth-child(1)');
+    var element2 = document.querySelector('#backgorund-Animation li:nth-child(2)');
+    var element3 = document.querySelector('#backgorund-Animation li:nth-child(3)');
+    var element4 = document.querySelector('#backgorund-Animation li:nth-child(4)');
+    var element5 = document.querySelector('#backgorund-Animation li:nth-child(5)');
+    var element6 = document.querySelector('#backgorund-Animation li:nth-child(6)');
+    
+   var id = setInterval(frame,150); // for call frame funcion again and again
+   function frame(){
+
+       if(pos == 0 ){
+            pos=100;
+       }else{
+            pos--;
+            rot = rot + 3 ;
+            console.log(pos)
+            element1.style.top =  pos +"vh";
+            element1.style.transform = `rotate(${rot}deg)`;
+       }    
+   }
+    
+   var id = setInterval(frame1,700); // for call frame funcion again and again
+   function frame1(){
+
+       if(pos == 0 ){
+            pos=100;
+       }else{
+            pos--;
+            rot = rot + 7 ;
+            console.log(pos)
+            element2.style.top =  pos +"vh";
+            element2.style.transform = `rotate(${rot}deg)`;
+       }    
+   }
+
+
+   var id1 = setInterval(frame2,500); // for call frame funcion again and again
+   function frame2(){
+
+       if(pos == 0 ){
+            pos=100;
+       }else{
+            pos--;
+            rot = rot + 10 ;
+            console.log(pos)
+            element2.style.top =  pos +"vh";
+            element2.style.transform = `rotate(${rot}deg)`;
+       }    
+   }
+
+   var id = setInterval(frame3,150); // for call frame funcion again and again
+   function frame3(){
+
+       if(pos == 0 ){
+            pos=100;
+       }else{
+            pos--;
+            rot = rot + 1 ;
+            console.log(pos)
+            element3.style.top =  pos +"vh";
+            element3.style.transform = `rotate(${rot}deg)`;
+       }    
+   }
+
+   var id = setInterval(frame4,300); // for call frame funcion again and again
+   function frame4(){
+
+       if(pos == 0 ){
+            pos=100;
+       }else{
+            pos--;
+            rot = rot + 6 ;
+            console.log(pos)
+            element4.style.top =  pos +"vh";
+            element4.style.transform = `rotate(${rot}deg)`;
+       }    
+   }
+
+   var id = setInterval(frame5,200); // for call frame funcion again and again
+   function frame5(){
+
+       if(pos == 0 ){
+            pos=100;
+       }else{
+            pos--;
+            rot = rot + 3 ;
+            console.log(pos)
+            element5.style.top =  pos +"vh";
+            element5.style.transform = `rotate(${rot}deg)`;
+       }    
+   }
+
+   var id = setInterval(frame6,150); // for call frame funcion again and again
+   function frame6(){
+
+       if(pos == 0 ){
+            pos=100;
+       }else{
+            pos--;
+            rot = rot + 3 ;
+            console.log(pos)
+            element6.style.top =  pos +"vh";
+            element6.style.transform = `rotate(${rot}deg)`;
+       }    
+   }
+
+} 
+bouyant();
+
+
 function start(){   //to start jouney 
     document.getElementById("container").style.backgroundImage = "url('../Images/Background.jpg')";
     document.getElementById("start").style.display = "none";
@@ -27,7 +140,7 @@ function drop(){ // fuction to make the drop fall
 
     document.getElementById("drop").style.display = "block";
     var pos = y; 
-    var id = setInterval(frame,5) // for call frame funcion again and again
+    var id = setInterval(frame,5); // for call frame funcion again and again
     function frame(){
 
         if(pos == 754 ){
@@ -86,7 +199,7 @@ function whale(){ // function for the movement of whale
 }
 
 
-
+/*document.getElementById("").style.transform = `rotate(${var}deg)`;*/
 
 
 
