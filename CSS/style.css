@@ -1,10 +1,29 @@
 *{
     margin: 0;
-    padding: 0; 
+    padding: 0;
+     
 }
 body{
     background-image:linear-gradient(#83a4d4,#b6fbff);
+    justify-content: center;
+    align-content: center;
 }
+
+#welcome{
+    position: relative;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Shadows into Light";
+    margin:20vh 30vw 0vh 30vw;    
+    text-align: center;
+    color: rgba(245, 245, 245, 0.7);
+    padding: 5px;
+    box-shadow: 1px 1px 10px aquamarine;
+    box-sizing: border-box;
+    border-radius: 12px;   
+    overflow: hidden; 
+}
+
 #start{
     position: absolute;
     height:30px;
@@ -76,7 +95,7 @@ body{
 
 #nemo{
     position: absolute;
-    background-image: url(/Images/nemo.png);
+    background-image: url(../Images/nemo.png);
     background-size:cover ;
     height: 20px;
     width: 40px;
@@ -86,20 +105,20 @@ body{
 
 }
 
-#g-fish{
+#gfish{
     position: absolute;
-    background-image: url(/Images/g-fish.png);
+    background-image: url(../Images/g-fish.png);
     background-size:cover ;
     height: 40px;
     width: 46px;
-    top:93vh;
+    top:87vh;
     left: 80vw;
     display: none;
 }
 
 #whale{
     position: absolute;
-    background-image: url(/Images/whale.png);
+    background-image: url(../Images/whale.png);
     background-size:cover ;
     height: 70px;
     width: 100px;
