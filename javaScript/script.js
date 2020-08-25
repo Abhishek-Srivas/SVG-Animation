@@ -103,7 +103,7 @@ bouyant();  // Calling fuction for background animation
 
 
 function start(){   //to start jouney 
-    document.getElementById("container").style.backgroundImage = "url('../Images/Background.jpg')";
+    document.getElementById("container").style.backgroundImage = "url('./Images/Background.jpg')";
     document.getElementById("start").style.display = "none";
     document.getElementById("welcome").style.display = "none";
     document.getElementById("fairy").style.display = "block";
@@ -151,12 +151,17 @@ function fairy(){ //Fairy movement and alert
         fairy.style.top = 20 +"vh";
         alert("don,t disturb fairy, she can send you in other realm")
         document.getElementById("isekai").style.display = "block";
+        rotation();
     }
 
 }
 
+function rotation(){
+
+}
+
 function realmChange(){ //for realm change with the help of portal button
-    document.getElementById("container").style.backgroundImage = "url('../Images/Background2/Background2.jpg')";
+    document.getElementById("container").style.backgroundImage = "url('./Images/Background2/Background2.jpg')";
     document.getElementById("fairy").style.display = "none";
     document.getElementById("isekai").style.display = "none";
     document.getElementById("nemo").style.display = "block";

@@ -52,7 +52,7 @@ body{
 }
 
 #drop{
-    background-image:url(../Images/drop.svg);
+    background-image:url(./Images/drop.svg);
     background-size:cover;
     position: relative; 
     height: 45px;
@@ -61,7 +61,7 @@ body{
 }
 
 #fairy{
-    background-image:url(../Images/Fairy1.png);
+    background-image:url(./Images/Fairy1.png);
     background-size:cover;
     position: absolute;
     top: 20vh;
@@ -95,7 +95,7 @@ body{
 
 #nemo{
     position: absolute;
-    background-image: url(../Images/nemo.png);
+    background-image: url(./Images/nemo.png);
     background-size:cover ;
     height: 20px;
     width: 40px;
@@ -107,7 +107,7 @@ body{
 
 #gfish{
     position: absolute;
-    background-image: url(../Images/g-fish.png);
+    background-image: url(./Images/g-fish.png);
     background-size:cover ;
     height: 40px;
     width: 46px;
@@ -118,7 +118,7 @@ body{
 
 #whale{
     position: absolute;
-    background-image: url(../Images/whale.png);
+    background-image: url(./Images/whale.png);
     background-size:cover ;
     height: 70px;
     width: 100px;
