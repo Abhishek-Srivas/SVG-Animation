@@ -3,7 +3,7 @@
 
 document.getElementById("welcome").innerHTML = "Welcome, press the button to start your jorney";//starting banner text
 
-function bouyant(){
+function bouyant(){ // function for rotating backgroud
     var pos=100;
     var rot = 0;
     var element1 = document.querySelector('#backgorund-Animation li:nth-child(1)');
@@ -13,7 +13,7 @@ function bouyant(){
     var element5 = document.querySelector('#backgorund-Animation li:nth-child(5)');
     var element6 = document.querySelector('#backgorund-Animation li:nth-child(6)');
     
-   var id = setInterval(frame,150); // for call frame funcion again and again
+   var id = setInterval(frame,150); // Box-1
    function frame(){
 
        if(pos == 0 ){
@@ -27,7 +27,7 @@ function bouyant(){
        }    
    }
     
-   var id = setInterval(frame1,700); // for call frame funcion again and again
+   var id = setInterval(frame1,700); // Box-2
    function frame1(){
 
        if(pos == 0 ){
@@ -42,21 +42,21 @@ function bouyant(){
    }
 
 
-   var id1 = setInterval(frame2,500); // for call frame funcion again and again
+   var id1 = setInterval(frame2,500); // Box-3
    function frame2(){
 
        if(pos == 0 ){
             pos=100;
        }else{
             pos--;
-            rot = rot + 10 ;
+            rot = rot + 6; 
             console.log(pos)
-            element2.style.top =  pos +"vh";
-            element2.style.transform = `rotate(${rot}deg)`;
+            element3.style.top =  pos +"vh";
+            element3.style.transform = `rotate(${rot}deg)`;
        }    
    }
 
-   var id = setInterval(frame3,150); // for call frame funcion again and again
+   var id = setInterval(frame3,150); // Box-4
    function frame3(){
 
        if(pos == 0 ){
@@ -65,12 +65,12 @@ function bouyant(){
             pos--;
             rot = rot + 1 ;
             console.log(pos)
-            element3.style.top =  pos +"vh";
-            element3.style.transform = `rotate(${rot}deg)`;
+            element4.style.top =  pos +"vh";
+            element4.style.transform = `rotate(${rot}deg)`;
        }    
    }
 
-   var id = setInterval(frame4,300); // for call frame funcion again and again
+   var id = setInterval(frame4,300); // Box-5
    function frame4(){
 
        if(pos == 0 ){
@@ -79,27 +79,13 @@ function bouyant(){
             pos--;
             rot = rot + 6 ;
             console.log(pos)
-            element4.style.top =  pos +"vh";
-            element4.style.transform = `rotate(${rot}deg)`;
-       }    
-   }
-
-   var id = setInterval(frame5,200); // for call frame funcion again and again
-   function frame5(){
-
-       if(pos == 0 ){
-            pos=100;
-       }else{
-            pos--;
-            rot = rot + 3 ;
-            console.log(pos)
             element5.style.top =  pos +"vh";
             element5.style.transform = `rotate(${rot}deg)`;
        }    
    }
 
-   var id = setInterval(frame6,150); // for call frame funcion again and again
-   function frame6(){
+   var id = setInterval(frame5,200); // Box-6
+   function frame5(){
 
        if(pos == 0 ){
             pos=100;
@@ -113,7 +99,7 @@ function bouyant(){
    }
 
 } 
-bouyant();
+bouyant();  // Calling fuction for background animation
 
 
 function start(){   //to start jouney 
@@ -121,6 +107,8 @@ function start(){   //to start jouney
     document.getElementById("start").style.display = "none";
     document.getElementById("welcome").style.display = "none";
     document.getElementById("fairy").style.display = "block";
+    document.getElementById("backgorund-Animation").style.display = "none";
+
 }
 
 function drop(){ // fuction to make the drop fall
@@ -183,8 +171,9 @@ function whale(){ // function for the movement of whale
     let id = setInterval(movement,150);
     let pos = 89;
     function movement(){
-        if(pos == 0){
+        if(pos == -10){
             clearInterval(id);
+            nemoMove();
         }
         else{
             pos--;
@@ -194,12 +183,36 @@ function whale(){ // function for the movement of whale
             if(whale.style.left == 80+"vw"){
                 gfish.style.display="none";
             }
+
+            if(whale.style.left == 40+"vw"){
+                alert("Whale will eat nemo,Save him by clicking on him and informing him about the whale");
+            }
         }
     }
 }
 
+function saveNemo(){
+    var nemo = document.getElementById("nemo");
+    nemo.style.top = 95+"vh";
+    alert("Nemo:- Thankyou for informing me my Friend")
+}
 
-/*document.getElementById("").style.transform = `rotate(${var}deg)`;*/
+function nemoMove(){
+    var nemo = document.getElementById("nemo");
+    var pos=10;
+    var id = setInterval(frame,40)
+    function frame(){
+        if(pos == 110){
+            clearInterval(id);
+        }
+        else{
+            pos++;
+            nemo.style.left = pos + "vw";
+        }
+    }
+}
+
+/*document.getElementById("").style.transform = `rotate(${var}deg)`; rotation syntax texting */
 
 
 
@@ -207,19 +220,25 @@ function whale(){ // function for the movement of whale
 /*                              Experience Panel :- 
 Problem faced and learned:-
 1.How to use JS                                                 ref:- w3schools
-2.how to make a element appear using js                         ref:- w3..
-3.accessing elements and tags                                   ref:- ~
-4.making a certain element move by clicking on button           ref:- ~
-5.getting the position of cursor                                ref:- ~
-6.calling a function again and again                            ref:- ~
-7.making drop appear at the place of mouse click                ref:- (own logic)putting every thing in section and adding onclick in section >
-8.avoiding drop overflow                                        setting position to relative
-9.adding new button to toggle the fairy world
-10.adding new world portal for making it fun
-11.Human World <3  
+2.How to make a element appear using js                         ref:- w3..
+3.Accessing elements and tags                                   ref:- ~
+4.Making a certain element move by clicking on button           ref:- ~
+5.Getting the position of cursor                                ref:- ~
+6.Calling a function again and again                            ref:- ~
+7.Making drop appear at the place of mouse click                ref:- (own logic)putting every thing in section and adding onclick in section >
+8.Avoiding drop overflow                                        setting position to relative
+9.Adding new button to toggle the fairy world
+10.Adding new world portal for making it fun
+11.Human World <3
+12.Adding Fish without disturbing layout
+13.Moving whale on click 
+14.Whale eating fish
+15.Adding floating box type baackground                         idea:-Youtube code:-Own (Hint:Use list from Youtube)
+16.Making boxes float                                           Done by self using setinterval (took a lot of time)
+17.Rotating them while floating                                 ref:-w3 for rotate func Js logic(own)       
 
-Moving logic :-
-:-syntax from w3schools
-:-logic self made
+recursive calling syntax:-
+:-w3schools
+
 
 */
