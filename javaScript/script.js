@@ -77,11 +77,10 @@ function whale(){ // function for the movement of whale
             pos--;
             whale.style.left = pos + "vw";
             console.log("whale:- " + whale.style.left);  // for checking the value of whale in console
-            console.log("Fish:- " + gfish.style.left);  // for checking the value of fish in console (Error:- Not showing any output)
-            if(whale.style.left == gfish.style.left){
+            console.log("Fish:- " + gfish.style.left);  // for checking the value of fish in console 
+            if(whale.style.left == 80+"vw"){
                 gfish.style.display="none";
             }
-
         }
     }
 }

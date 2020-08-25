@@ -5,29 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,intial-scale=1.0">
     <title>SVG Background</title>
-    <!------StyleSheet------->>
+    <!------StyleSheet------->
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
-    <!-------Google Font for welcome banner------->>
+    <!-------Google Font for welcome banner------->
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!----Banner Div-->>
-    <p id="welcome"></p>
-    <!----Start Button--->
-    <button type="button" id="start" onclick="start()">Start Journey</button>
-    <!-------For Drop effect-------->>
+   
+    <!-------For Drop effect-------->
     <section id="container" onclick="drop()">
+        <!----Banner Div-->
+        <p id="welcome"></p>
+         
+        <!----Start Button--->
+        <button type="button" id="start" onclick="start()">Start Journey</button>
+        
         <div id="drop"></div>
     </section>
-    <!-----Portal summoning fairy-------->>
+
+    <!-----Portal summoning fairy-------->
     <div id="fairy" onclick="fairy()"></div>
-    <!-------For portal------>>
+    <!-------For portal------>
     <button type="button" id="isekai" onclick="realmChange()">Realm 2<br>portal</button>
-    <!---Divs for fish,group of fish and whale---->>
+    <!---Divs for fish,group of fish and whale---->
     <div id="gfish"></div>
     <div id="nemo"></div>
     <div id="whale" onclick="whale()"></div>
-    <!-------JS added------>>
+    <!-------JS added------>
     <script src="../javaScript/script.js" ></script>
 </body>
 </html>
