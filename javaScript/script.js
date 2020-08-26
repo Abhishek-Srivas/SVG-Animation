@@ -141,6 +141,21 @@ function drop(){ // fuction to make the drop fall
       
 }
 
+function plane(){ //plane movement
+    var pos=-4;
+    var plane = document.getElementById("plane");
+    var id = setInterval(pmove,150)
+    function pmove(){
+        if( pos == 110){
+            pos = -4;
+        }
+        else{
+            pos++;
+            plane.style.left = pos +"vw";
+        }
+    }
+}
+
 function fairy(){ //Fairy movement and alert
     let fairy = document.getElementById("fairy");
     if(fairy.style.top != 5+"vh" ){                //Trying new things with if else
@@ -167,6 +182,9 @@ function realmChange(){ //for realm change with the help of portal button
     document.getElementById("nemo").style.display = "block";
     document.getElementById("gfish").style.display = "block";
     document.getElementById("whale").style.display = "block";
+    document.getElementById("plane").style.display = "block";
+    
+    plane();
 }
 
 function whale(){ // function for the movement of whale
@@ -202,12 +220,23 @@ function saveNemo(){
     alert("Nemo:- Thankyou for informing me my Friend")
 }
 
+
+function lastmsg(){
+    if(document.getElementById("nemo").style.left == 110+"vw"){
+        var msg = document.getElementById("Finalmsg");
+        msg.style.display = "block";
+        msg.innerText = "Welcome to the World of Mortal,the only thing that gonna save you is team work <3 Best Of Luck";
+        
+    }
+}
+
 function nemoMove(){
     var nemo = document.getElementById("nemo");
     var pos=10;
     var id = setInterval(frame,40)
     function frame(){
         if(pos == 110){
+            lastmsg();
             clearInterval(id);
         }
         else{
@@ -216,6 +245,8 @@ function nemoMove(){
         }
     }
 }
+
+
 
 /*document.getElementById("").style.transform = `rotate(${var}deg)`; rotation syntax texting */
 
@@ -246,4 +277,12 @@ recursive calling syntax:-
 :-w3schools
 
 
+*/
+
+/* 
+console.dir(document); Gives all the property and method attached to object
+if display is set none
+.innertext :- pays attention to styling
+.textcontent:-will not consider style
+var.innerHTML can put content in tags 
 */
