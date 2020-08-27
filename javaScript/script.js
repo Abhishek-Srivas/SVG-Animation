@@ -184,7 +184,7 @@ function realmChange(){ //for realm change with the help of portal button
     document.getElementById("whale").style.display = "block";
     document.getElementById("plane").style.display = "block";
     
-    plane();
+    plane(); // plane calling
 }
 
 function whale(){ // function for the movement of whale
@@ -214,7 +214,7 @@ function whale(){ // function for the movement of whale
     }
 }
 
-function saveNemo(){
+function saveNemo(){ // for alert msg to save nemo
     var nemo = document.getElementById("nemo");
     nemo.style.top = 95+"vh";
     alert("Nemo:- Thankyou for informing me my Friend")
@@ -225,12 +225,12 @@ function lastmsg(){
     if(document.getElementById("nemo").style.left == 110+"vw"){
         var msg = document.getElementById("Finalmsg");
         msg.style.display = "block";
-        msg.innerText = "Welcome to the World of Mortal,the only thing that gonna save you is team work <3 Best Of Luck";
+        msg.innerText = "Welcome to the World of Programmers,the only thing that's gonna save you is team work <3 Best Of Luck";
         
     }
 }
 
-function nemoMove(){
+function nemoMove(){ // nemo runs from whale
     var nemo = document.getElementById("nemo");
     var pos=10;
     var id = setInterval(frame,40)
